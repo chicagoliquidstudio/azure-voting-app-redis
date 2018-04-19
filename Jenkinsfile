@@ -61,7 +61,7 @@ timeout(10) {
                 azureCLI commands: [[exportVariablesString: '', script: "az group list"]], principalCredentialId: 'AzureServicePrincipal'
 
                 // reusing username/password creds from converse registry
-                docker.withRegistry("$docker_registry", 'converse_registry') {
+                docker.withRegistry("$docker_registry", 'mcc_registry') {
                     def customImage = docker.build("$image_name:$image_tag", "./azure-vote")
 
                     if(promote) {
