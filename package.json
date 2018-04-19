@@ -1,0 +1,28 @@
+{
+  "name": "azure-voting-app-redis",
+  "version": "1.0.0",
+  "description": "jumpstart spinnaker demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cucumber:build": "tsc -p tsconfig-gherkin.json",
+    "cucumber:report": "node features/report/generate-report.js",
+    "cucumber:test": "npm run cucumber:build && \"./node_modules/.bin/cucumber-js\" --format=json:features/report/customer-report.json --require=features/support --require=features/step_definitions features/customer/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AccentureJumpStart/azure-voting-app-redis.git"
+  },
+  "author": "blake.mccartin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AccentureJumpStart/azure-voting-app-redis/issues"
+  },
+  "homepage": "https://github.com/AccentureJumpStart/azure-voting-app-redis#readme",
+  "devDependencies": {
+    "@types/node": "^9.6.6",
+    "chromedriver": "^2.33.2",
+    "cucumber": "^4.1.0",
+    "cucumber-html-reporter": "^2.0.0"
+  }
+}

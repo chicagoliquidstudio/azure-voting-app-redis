@@ -1,0 +1,48 @@
+[
+  {
+    "description": "  As a user of the Aon app\n  I want to view my coverage, claims and payment\n  And receive assistance via chat",
+    "keyword": "Feature",
+    "name": "Aon App - Browse",
+    "line": 1,
+    "id": "aon-app---browse",
+    "tags": [],
+    "uri": "features\\customer\\main.feature",
+    "elements": [
+      {
+        "id": "aon-app---browse;test",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "test",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am on the home page",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "the home page is loaded",
+            "match": {
+              "location": "features\\step_definitions\\steps.js:7"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "module": "commonjs",
+        "noImplicitAny": false,
+
+        "alwaysStrict": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "lib": ["es2015.promise", "es5", "es6", "es7", "dom"], // need dom for superTest
+        "target": "es5", // need es5 for AWS target
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+               "watch": false
+    },
+    "compileOnSave": true,
+    "include": [
+        "features/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
