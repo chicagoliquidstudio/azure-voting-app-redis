@@ -1,6 +1,6 @@
 // Docker variables
-docker_registry = "https://mccregistry.azurecr.io"
-docker_registry_tag = "mccregistry.azurecr.io"
+docker_registry = "https://mccRegistry.azurecr.io"
+docker_registry_tag = "mccRegistry.azurecr.io"
 image_name = "azure-vote-front"
 image_tag = ''
 
