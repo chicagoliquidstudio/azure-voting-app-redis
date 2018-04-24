@@ -66,7 +66,7 @@ timeout(10) {
 
                     if(promote) {
                         // pushes to the azure repo with the label 'latest'
-                        customImage.push('latest')
+                        customImage.push()
                     }
                     else {
                         customImage.push()

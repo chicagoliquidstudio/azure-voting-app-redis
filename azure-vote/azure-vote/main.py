@@ -25,6 +25,12 @@ if ("TITLE" in os.environ and os.environ['TITLE']):
 else:
     title = app.config['TITLE']
 
+if ("DEPLOYMENT" in os.environ and os.environ['DEPLOYMENT']):
+    deployment = os.environ['DEPLOYMENT']
+else:
+    deployment = app.config['DEPLOYMENT']
+
+
 # Redis configurations
 redis_server = os.environ['REDIS']
 
@@ -58,7 +64,7 @@ def index():
         vote2 = r.get(button2).decode('utf-8')            
 
         # Return index with values
-        return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title)
+        return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title, deployment=deployment)
 
     elif request.method == 'POST':
 
@@ -69,7 +75,7 @@ def index():
             r.set(button2,0)
             vote1 = r.get(button1).decode('utf-8')
             vote2 = r.get(button2).decode('utf-8')
-            return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title)
+            return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title, deployment=deployment)
         
         else:
 
@@ -82,7 +88,7 @@ def index():
             vote2 = r.get(button2).decode('utf-8')  
                 
             # Return results
-            return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title)
+            return render_template("index.html", value1=int(vote1), value2=int(vote2), button1=button1, button2=button2, title=title, deployment=deployment)
 
 if __name__ == "__main__":
     app.run()
