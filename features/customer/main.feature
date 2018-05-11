@@ -1,7 +1,6 @@
-Feature: Aon App - Browse
-  As a user of the Aon app
-  I want to view my coverage, claims and payment
-  And receive assistance via chat
+Feature: Spinnaker App
+  As a user of the spinnaker app
+  I want to view my page
 
     Scenario: test
       Given I am on the home page
