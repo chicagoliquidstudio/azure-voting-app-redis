@@ -81,7 +81,7 @@ def index():
 
             # Insert vote result into DB
             vote = request.form['vote']
-            r.incr(vote,1)
+            r.incr('Dogs',1)
             
             # Get current values
             vote1 = r.get(button1).decode('utf-8')
