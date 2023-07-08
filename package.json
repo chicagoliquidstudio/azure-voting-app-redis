@@ -21,7 +21,7 @@
   "homepage": "https://github.com/AccentureJumpStart/azure-voting-app-redis#readme",
   "devDependencies": {
     "@types/node": "^9.6.6",
-    "chromedriver": "^2.33.2",
+    "chromedriver": "^114.0.2",
     "cucumber": "^4.1.0",
     "cucumber-html-reporter": "^2.0.0"
   }
